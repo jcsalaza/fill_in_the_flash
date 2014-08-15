@@ -3,3 +3,7 @@ def helloworld
 end
 
 helloworld
+
+def practice
+  p "This is a kindness!"
+end
