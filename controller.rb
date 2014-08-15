@@ -29,8 +29,13 @@ class Controller
     end
   end
 
-  def correct_answer?(answer)
-
+  def correct_answer?(response, card)
+    if response == card.answer
+      puts "Correct!!!".green
+    else
+      view.display_correct_answer
+      puts card.answer
+    end
   end
 
   def play_deck(deck)
@@ -40,9 +45,9 @@ class Controller
       current_card = returned_card
       view.display_question(current_card)
       answer = gets.chomp.downcase
-      correct_answer?(answer)
-
+      correct_answer?(answer, current_card)
     end
+    puts "Thanks for playing!"
   end
 
   end

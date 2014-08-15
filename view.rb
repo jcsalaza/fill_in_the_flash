@@ -33,7 +33,6 @@ class View
   def display_correct_answer
     puts "Oops! Looks like your mind deceived you this time. Better luck next time."
     puts "Here's the correct answer:"
-    # puts correct_answer
   end
 
   def show_score
