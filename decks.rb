@@ -23,9 +23,8 @@ class Deck
   end
 
   #TODO play deck method that puts deck
-  def return_card
-    deck_in_play = deck.dup if deck_in_play = nil
-    deck_in_play.shift()
+  def return_deck
+    deck.shuffle[0...5]
   end
 
   private
@@ -39,6 +38,3 @@ class Deck
   end
 
 end
-
-deck = Deck.new('songs')
-deck.return_card
