@@ -1,4 +1,4 @@
-# require
+require 'colorize'
 
 class View
 
@@ -23,13 +23,12 @@ class View
     puts "Type in the answer (or type 'I hate flashcards' to exit the program) - "
   end
 
-  def display_card(card)
-    # displays question, directions, then correct answer
+  def display_question(card)
+    puts card.question.blue
+    directions
   end
 
-  def correct_answer?
 
-  end
 
   def display_correct_answer
     puts "Oops! Looks like your mind deceived you this time. Better luck next time."

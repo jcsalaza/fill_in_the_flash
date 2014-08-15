@@ -4,13 +4,14 @@ require 'pry'
 
 class Deck
   include Parser
-  attr_reader :category, :file
+  attr_reader :category, :file, :last_card_id
   attr_accessor :deck
 
   def initialize(category)
     @category = category
     @file = get_category_file
     @deck = make_deck
+    @last_card_id = deck.size
   end
 
   def make_deck
@@ -22,8 +23,8 @@ class Deck
   end
 
   #TODO play deck method that puts deck
-  def play_deck
-    puts "playing deck"
+  def return_card
+    #TODO return card
   end
 
   private
@@ -38,5 +39,5 @@ class Deck
 
 end
 
-deck = Deck.new('songs')
-binding.pry
+# deck = Deck.new('songs')
+# binding.pry

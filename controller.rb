@@ -14,9 +14,11 @@ class Controller
       input = view.welcome_message
       case input
       when "songs"
-        Deck.play_deck("songs")
+        song_deck = Deck.new("songs")
+        play_deck(song_deck)
       when "movies"
-        Deck.play_deck("category")
+        movie_deck = Deck.new("movies")
+        play_deck(movie_deck)
       when "exit"
         return
       when "i hate flashcards"
@@ -26,6 +28,25 @@ class Controller
       end
     end
   end
+
+  def correct_answer?(answer)
+
+  end
+
+  def play_deck(deck)
+    current_card = nil
+
+    until deck.last_card_id >= current_card.id
+      current_card = returned_card
+      view.display_question(current_card)
+      answer = gets.chomp.downcase
+      correct_answer?(answer)
+
+    end
+  end
+
+  end
+
 
 end
 
