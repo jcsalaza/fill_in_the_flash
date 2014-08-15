@@ -23,7 +23,8 @@ class Deck
 
   #TODO play deck method that puts deck
   def play_deck
-    puts "playing deck"
+    # return card that we're playing
+    # deck... contains card objects
   end
 
   private
@@ -38,5 +39,5 @@ class Deck
 
 end
 
-deck = Deck.new('songs')
-binding.pry
+# deck = Deck.new('songs')
+# binding.pry
