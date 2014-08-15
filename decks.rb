@@ -24,8 +24,8 @@ class Deck
 
   #TODO play deck method that puts deck
   def return_card
-    #TODO return card
-
+    deck_in_play = deck.dup if deck_in_play = nil
+    deck_in_play.shift()
   end
 
   private
@@ -40,5 +40,5 @@ class Deck
 
 end
 
-# deck = Deck.new('songs')
-# binding.pry
+deck = Deck.new('songs')
+deck.return_card
