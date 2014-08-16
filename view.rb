@@ -1,7 +1,7 @@
 require 'colorize'
 
+# TODO make View a module?
 class View
-
 
   def welcome_message
     puts "Welcome to Fill-In-The-Flash!".bold.blink
@@ -29,22 +29,13 @@ class View
     directions
   end
 
-
-
-  def display_correct_answer
+  def display_correct_answer(answer)
     puts "Oops! Looks like your mind deceived you this time. Better luck next time.".red
-    puts "Here's the correct answer:"
+    puts "Here's the correct answer: #{answer}".green
   end
 
-  def show_score
-
-  end
-
-  def clear_screen!
+  def reset_screen
     print "\e[2J"
-  end
-
-  def move_to_home!
     print "\e[H"
   end
 
@@ -60,10 +51,11 @@ class View
       puts
       puts "You got #{score} out of 5 correct!"
     end
+    puts "Thanks for playing!"
   end
-
-
 end
+
+#============ Tests ========================
 
 # puts "-"*200
 # new = View.new

@@ -22,7 +22,6 @@ class Deck
     temp_deck
   end
 
-  #TODO play deck method that puts deck
   def return_deck
     deck.shuffle[0...5]
   end
