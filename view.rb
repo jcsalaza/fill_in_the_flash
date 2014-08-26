@@ -1,6 +1,5 @@
 require 'colorize'
 
-# TODO make View a module?
 class View
 
   def welcome_message
@@ -52,6 +51,10 @@ class View
       puts "You got #{score} out of 5 correct!"
     end
     puts "Thanks for playing!"
+  end
+
+  def category_error
+    puts "Please enter a valid category." 
   end
 end
 

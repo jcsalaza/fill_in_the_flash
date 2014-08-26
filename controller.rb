@@ -34,7 +34,7 @@ class Controller
 
   def correct_answer?(response, card)
     if response == card.answer
-      puts "Correct!!!".green                    # TODO put in view?
+      puts "Correct!!!".green                    # TODO putt in view?
       1
     else
       view.display_correct_answer(card.answer)
